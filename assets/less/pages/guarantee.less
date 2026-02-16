@@ -1,0 +1,233 @@
+.guarantee {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2.25fr 0.75fr;
+    grid-template-columns: 2.25fr 0.75fr;
+    -ms-grid-rows: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    gap: 8px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 80px;
+}
+
+.guarantee__row {
+    .display-flex();
+    gap: 8px;
+}
+
+.guarantee__item {
+    .display-flex();
+    .align-items-center();
+    gap: 20px;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 36px;
+
+}
+
+.guarantee__item-1 {
+    background-color: @accent;
+    width: 67%;
+}
+
+.guarantee__item-2 {
+    .justify-content-center();
+    background-color: @bg;
+    color: @accent;
+    text-align: center;
+    width: 33%;
+
+    .big {
+        font-size: 30px;
+    }
+}
+
+.guarantee__item-3 {
+    background-color: #F2B644;
+    width: 33%;
+}
+
+.guarantee__item-4 {
+    background-color: #7A7991;
+    padding-right: 15px;
+    width: 67%;
+
+    .guarantee__image {
+        width: 186px;
+    }
+}
+
+.guarantee__item-5 {
+    background-color: @bg;
+    color: @dark;
+    padding-right: 15px;
+
+    .guarantee__image {
+        width: 50%;
+    }
+}
+
+.guarantee__column {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / span 3;
+    .display-flex();
+    .column();
+    .align-items-center();
+    gap: 20px;
+    background-color: @bg;
+    border-radius: 40px;
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+
+    .guarantee__image {
+        background-color: #fff;
+        width: 100%;
+
+        img {
+            max-width: 240px;
+        }
+    }
+
+    span {
+        display: block;
+        padding: 0 15px;
+    }
+}
+
+.guarantee__image {
+    .display-flex();
+    .justify-content-center();
+        .flex(0,0,auto);
+    border-radius: 30px;
+
+    img {
+        border-radius: 30px;
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.guarantee-icons {
+    margin-bottom: 80px;
+
+    h2, .h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.guarantee-icons__list {
+    .display-flex();
+    gap: 40px;
+    overflow: auto;
+    .scroll-thin();
+}
+
+.guarantee-icons__item {
+    .display-flex();
+    .column();
+    .align-items-center();
+    width: 20%;
+    min-width: 200px;
+}
+
+.guarantee-icons__image {
+    .display-flex();
+    .align-items-center();
+    .justify-content-center();
+    background-color: @bg;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.guarantee-icons__text {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.guarantee-time {
+    margin-bottom: 80px;
+
+    h2, .h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.guarantee-time__wrap {
+    .display-flex();
+    gap: 12px;
+}
+
+.guarantee-time__block {
+    background-color: @bg;
+    border-radius: 40px;
+    padding: 15px 44px 32px;
+    width: 50%;
+}
+
+.guarantee-time__value {
+    font-size: 40px;
+    font-weight: 900;
+
+    span {
+        font-size: 120px;
+    }
+}
+
+.guarantee-time__text {
+    border-top: 4px solid #fff;
+    margin-top: 8px;
+    padding-top: 28px;
+}
+
+.guarantee-conditions {
+    h2, .h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.guarantee-conditions__list {
+    .display-flex();
+    .row-wrap();
+    gap: 12px;
+}
+
+.guarantee-conditions__item {
+    .display-flex();
+    .column();
+    .align-items-center();
+    background-color: #EDF2FF;
+    border-radius: 30px;
+    counter-increment: conditions;
+    padding: 40px 24px 32px;
+    text-align: center;
+    width: ~'calc(33.333333% - 8px)';
+
+    &::before {
+        background-color: #fff;
+        border-radius: 50%;
+        content: counter(conditions);
+        color: @accent;
+        font-size: 70px;
+        font-weight: 900;
+        line-height: 118px;
+        text-align: center;
+        width: 118px;
+        height: 118px;
+        margin-bottom: 32px;
+    }
+}

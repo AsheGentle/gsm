@@ -1,0 +1,134 @@
+body {
+    -webkit-text-size-adjust: 100%;
+    color: @dark;
+    font-size: 14px;
+    margin: 0;
+}
+
+a {
+    .transition();
+    color: @accent;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+img {
+    outline: none;
+    border:none;
+}
+
+a, a:hover, a:focus,
+input, input:hover, input:focus, input:active,
+select, select:hover, select:focus, select:active,
+textarea, textarea:hover, textarea:focus, textarea:active,
+button, button:hover, button:focus, button:active,
+label, label:hover, label:focus, label:active {
+    outline: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner, select::-moz-focus-inner {
+    border: none;
+}
+
+textarea,
+input,
+select,
+button {
+    border-radius: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+p {
+    margin: 0 0 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1, .h1 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+}
+
+h2, .h2 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+h3, .h3 {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.title {
+    .display-flex();
+    .row-wrap();
+    .align-items-center();
+    margin-bottom: 28px;
+
+    h1, .h1, h2, .h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .btn {
+        margin-left: auto;
+    }
+}
+
+.title__count {
+    color: #A5A5A5;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 24px;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.image-left {
+    .display-flex();
+    .align-items-center();
+
+    img {
+        margin-right: 70px;
+    }
+}
+
+.image-right {
+    .display-flex();
+    .align-items-center();
+
+    img {
+        margin-left: 70px;
+    }
+}
+
+strong {
+    font-weight: 600;
+}
+
+.accent {
+    color: @accent;
+}

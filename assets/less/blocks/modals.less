@@ -1,0 +1,146 @@
+.overflow {
+    overflow: hidden;
+}
+
+.modal {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+
+    &.open {
+        .display-flex();
+        .justify-content-center();
+        .align-items-center();
+    }
+}
+
+.modal--small {
+    .modal__overflow {
+        width: 560px;
+    }
+}
+
+.modal__overflow {
+    position: relative;
+    max-height: 90%;
+    max-width: 90%;
+    padding: 11px 14px;
+    width: 890px;
+}
+
+.modal__content {
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: auto;
+    padding: 52px 44px;
+}
+
+.modal__close {
+    .display-flex();
+    .align-items-center();
+    .justify-content-center();
+    background-color: @accent;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+
+    svg {
+        pointer-events: none;
+        fill: currentColor;
+        width: 20px;
+        height: 20px;
+    }
+
+    span {
+        pointer-events: none;
+        display: none;
+    }
+}
+
+.modal-review__name {
+    font-size: 20px;
+}
+
+.modal-review__meta {
+    font-size: 14px;
+}
+
+.modal-review__info {
+    .display-flex();
+    .align-items-start();
+    margin-top: 20px;
+}
+
+.modal-review__photo {
+    .flex(0,0,auto);
+    width: 15%;
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.modal-review__text {
+    padding-left: 12px;
+    width: 85%;
+}
+
+.modal-cart__body {
+    .display-flex();
+    .column();
+    .align-items-center();
+    text-align: center;
+}
+
+.modal-cart__image {
+    max-width: 200px;
+    margin-bottom: 15px;
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.modal-cart__success {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.modal-cart__title {
+    margin-bottom: 40px;
+}
+
+.modal-cart__buttons {
+    text-align: right;
+
+    .btn {
+        width: 380px;
+        max-width: 100%;
+    }
+}
+
+.modal-cart__close {
+    color: @accent;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-left: auto;
+}

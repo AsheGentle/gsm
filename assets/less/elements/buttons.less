@@ -1,0 +1,123 @@
+.btn {
+    .transition();
+    background-color: @accent;
+    border: none;
+    border-radius: 50px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        background-color: @accent-hover;
+        color: #fff;
+    }
+
+    &.disabled, &:disabled {
+        background-color: #747474;
+        cursor: not-allowed;
+    }
+}
+
+.btn--border {
+    background-color: transparent;
+    border: 1px solid;
+    color: @accent;
+    padding: 13px 19px;
+
+    &:hover {
+        background-color: @accent-hover;
+        border-color: @accent-hover;
+        color: #fff;
+    }
+
+    &.disabled, &:disabled {
+        background-color: transparent !important;
+        border-color: #747474 !important;
+        color: #747474 !important;
+    }
+}
+
+.btn--light {
+    background-color: #fff;
+    color: @accent;
+
+    &.btn--border {
+        background-color: transparent;
+        color: #fff;
+
+        &:hover {
+            background-color: @accent-hover;
+            border-color: @accent-hover;
+            color: #fff;
+        }
+    }
+}
+
+.btn--link {
+    background-color: transparent;
+    color: @accent;
+    padding: 0;
+
+    &:hover {
+        background-color: transparent;
+        color: @accent-hover;
+    }
+}
+
+.btn--dark {
+    background-color: @dark;
+    color: #fff;
+
+    &.btn--border {
+        background-color: transparent;
+        color: @dark;
+
+        &:hover {
+            background-color: @accent-hover;
+            border-color: @accent-hover;
+            color: #fff;
+        }
+    }
+}
+
+.btn--red {
+    &.btn--border {
+        background-color: transparent;
+        color: @red;
+
+        &:hover {
+            background-color: @accent-hover;
+            border-color: @accent-hover;
+            color: #fff;
+        }
+    }
+}
+
+.btn--icon {
+    .display-flex();
+    .align-items-center();
+    .justify-content-center();
+    width: 45px;
+    height: 45px;
+    min-width: 0;
+    padding: 0;
+
+    svg {
+        fill: #fff;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.btn--with-icon {
+    .display-inline-flex();
+    .align-items-center();
+}

@@ -1,0 +1,110 @@
+.tabs-title {
+    font-weight: 900;
+    margin-right: 12px;
+}
+
+.tabs-overflow {
+    .display-flex();
+    .align-items-center();
+    margin: -10px -14px -20px;
+    margin-left: auto;
+    overflow: auto;
+    padding: 10px 14px 20px;
+    .scroll-hide();
+
+    &.line {
+        margin-top: 10px;
+        margin-left: -14px;
+        width: ~'calc(100% + 28px)';
+    }
+
+    &.small {
+        .tabs__item {
+            border: none;
+            color: #5C5C5C;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 10px 14px;
+
+            &.active {
+                background-color: @accent;
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &.steps {
+        .tabs__item {
+            border: none;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 8px 14px;
+
+            &:hover {
+                background-color: @bg;
+            }
+
+            &.active {
+                background-color: @dark;
+                color: #fff;
+
+                svg {
+                    fill: #fff;
+                }
+
+                & ~ .tabs__item {
+                    color: #5C5C5C;
+                }
+            }
+        }
+    }
+}
+
+.tabs {
+    .display-inline-flex();
+    gap: 6px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    padding: 6px;
+}
+
+.tabs__item {
+    background-color: @bg;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    color: @dark;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 14px;
+    padding: 7px 14px;
+    white-space: nowrap;
+    .display-flex();
+    .align-items-center();
+    .justify-content-between();
+    .transition(background-color);
+
+    svg {
+        .flex(0,0,auto);
+        fill: #5C5C5C;
+        margin-right: 10px;
+        .transition();
+    }
+
+    &:hover {
+        background-color: fade(@accent, 20%);
+    }
+
+    &.active {
+        border-color: @accent;
+        color: @accent;
+
+        svg {
+            fill: @accent;
+        }
+    }
+}

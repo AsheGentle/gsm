@@ -1,0 +1,181 @@
+.credit-section {
+    padding-bottom: 40px;
+    padding-left: var(--padding-horizontal);
+    padding-right: var(--padding-horizontal);
+
+    h3, .h3 {
+        font-weight: 600;
+        text-transform: none;
+    }
+}
+
+.credit-wrap {
+    .display-flex();
+    .align-items-start();
+    gap: 80px;
+    margin-bottom: 40px;
+}
+
+.credit-wrap__description {
+    font-size: 20px;
+    width: 66.5%;
+
+    h1, .h1 {
+        color: @accent;
+        font-size: 100px;
+    }
+}
+
+.credit-wrap__image {
+    width: 33.5%;
+
+    img {
+        display: block;
+        border-radius: 40px;
+        max-width: 100%;
+    }
+}
+
+.credit-list {
+    .display-flex();
+    .row-wrap();
+    gap: 40px;
+    margin-bottom: 80px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.credit-list__item {
+    font-size: 20px;
+    width: ~'calc(50% - 20px)';
+
+    ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &.bg {
+        background-color: @bg;
+        border-radius: 40px;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 20px 48px 48px;
+    }
+}
+
+.credit-list__info {
+    background-color: fade(#F2B644, 20%);
+    border-radius: 20px;
+    color: #F2B644;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 28px;
+    padding: 20px 36px;
+}
+
+.credit-banner {
+    background-image: url('../images/credit-bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    margin-bottom: 80px;
+    min-height: 350px;
+    padding: 56px;
+}
+
+.credit-how {
+    margin-bottom: 80px;
+
+    .subtitle {
+        margin-top: -20px;
+        text-align: left;
+    }
+}
+
+.credit-slider {
+    margin: 40px -15px 0;
+
+    .slick-list {
+        overflow: visible;
+    }
+
+    &:not(.slick-initialized) {
+        .display-flex();
+
+        .credit-slider__item:nth-child(n+4) {
+            display: none;
+        }
+    }
+}
+
+.credit-slider__item {
+    padding: 0 15px;
+    width: 380px;
+}
+
+.credit-slider__image {
+    aspect-ratio: ~'350 / 450';
+    background-color: @bg;
+    border-radius: 40px;
+    margin-bottom: 32px;
+    .display-flex();
+    .align-items-center();
+    .justify-content-center();
+
+    img {
+        border-radius: 20px;
+        display: block;
+        max-width: 90%;
+    }
+
+    &.bg {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.credit-slider__num {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.credit-slider__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.credit-info {
+    font-size: 20px;
+    margin-bottom: 80px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.credit-info__title {
+    border-bottom: 4px solid #000786;
+    margin-bottom: 40px;
+    padding-bottom: 36px;
+
+    img {
+        display: blcok;
+        max-width: 100%;
+    }
+}
+
+.credit-info__subtitle {
+    margin-bottom: 40px;
+}
